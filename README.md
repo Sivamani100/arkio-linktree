@@ -1,17 +1,24 @@
-# Arkio — The Next Generation of Digital Identity 🚀
+# Arkio — Premium Linktree Clone & Bio-Link Platform 🚀
 
-Arkio is a premium, high-fidelity standalone Expo application designed for creators who want more than just a link-in-bio. It features a sharp, "square-edged" aesthetic, smooth background morphing animations, and a focus on monetization and insights.
+Arkio is a high-fidelity, standalone Expo application built as a premium alternative to Linktree. It allows creators to consolidate their digital identity into a single, beautiful, and high-converting link. 
+
+Designed with a "sharp-edged" aesthetic and powered by advanced animations, Arkio is the ultimate bio-link platform for the modern creator economy.
 
 ![Arkio Onboarding](https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&q=80)
 
-## ✨ Features
+## ✨ Core Features (Linktree Clone+)
 
-- **💎 Premium Aesthetic**: A unique "sharp-edged" design system with zero rounded corners for a high-end, editorial feel.
-- **📱 Fluid Onboarding**: A 10-screen high-fidelity onboarding flow with background color morphing and smooth transitions powered by `react-native-reanimated`.
-- **💰 Monetization Built-in**: Integrated flows for Tip Jars, Product Sales, Course building, and Affiliate links.
-- **📊 Creator Insights**: Deep analytics tracking for profile visits, click-through rates, and audience trends.
-- **🎨 Visual Editor**: Live preview and customization of your profile's theme, buttons, and layouts.
-- **🤖 AI Assistant**: Smart content optimization and caption generation.
+- **🔗 Unified Bio-Link**: Create a single URL that houses all your social profiles, websites, and content.
+- **💎 Premium Design System**: A unique "sharp" aesthetic with zero rounded corners, setting your profile apart from standard link-in-bio tools.
+- **📱 Dynamic Onboarding**: A 10-screen high-fidelity onboarding flow with background color morphing transitions.
+- **💰 Advanced Monetization**: 
+  - **Tip Jar**: Receive support directly from your audience.
+  - **Digital Store**: Sell products and downloads with zero friction.
+  - **Course Builder**: Package and sell your expertise.
+  - **Affiliate Engine**: Auto-convert links into affiliate revenue.
+- **📊 Detailed Analytics**: Professional-grade tracking for clicks, visits, and audience growth trends.
+- **🎨 Visual Editor**: Real-time customization of your bio-link profile with premium themes and layouts.
+- **🤖 AI Caption Assistant**: Generate social media captions and optimize your profile using AI.
 
 ## 🛠️ Tech Stack
 
@@ -23,12 +30,6 @@ Arkio is a premium, high-fidelity standalone Expo application designed for creat
 - **Styling**: Native StyleSheet with custom design tokens
 
 ## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v18+)
-- pnpm (Recommended) or npm/yarn
-- Expo Go app on your mobile device (to test on real hardware)
 
 ### Installation
 
@@ -56,22 +57,21 @@ Arkio is a premium, high-fidelity standalone Expo application designed for creat
 ## 📂 Project Structure
 
 ```text
-├── app/               # Expo Router screens and layouts
-│   ├── (tabs)/        # Main application tabs (Earn, Insights, etc.)
-│   ├── onboarding.tsx # 10-screen premium onboarding
-│   └── _layout.tsx    # Root navigation configuration
-├── components/        # Reusable UI components (Buttons, Cards, Headers)
+├── app/               # Expo Router screens (Linktree pages, Earn, Insights)
+│   ├── (tabs)/        # Main app navigation (Bio-link editor, Audience)
+│   ├── onboarding.tsx # Premium user onboarding flow
+│   └── _layout.tsx    # App entry and navigation setup
+├── components/        # UI Kit (Buttons, Cards, Profile components)
 ├── constants/         # Design tokens (Colors, Typography)
-├── context/           # App-wide state (Auth, Theme)
-├── hooks/             # Custom React hooks
-├── assets/            # Static images and brand assets
-└── utils/             # Helper functions and themes
+├── context/           # Global State Management
+├── assets/            # Static images and icons
+└── utils/             # Themes and helper functions
 ```
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+MIT License.
 
 ---
 
-Built with ❤️ for the next generation of creators.
+Built as a premium Linktree Clone for the next generation of creators.
