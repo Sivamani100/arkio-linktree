@@ -4,8 +4,6 @@ Arkio is a high-fidelity, standalone Expo application built as a premium alterna
 
 Designed with a "sharp-edged" aesthetic and powered by advanced animations, Arkio is the ultimate bio-link platform for the modern creator economy.
 
-![Arkio Onboarding](https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&q=80)
-
 ## ✨ Core Features (Linktree Clone+)
 
 - **🔗 Unified Bio-Link**: Create a single URL that houses all your social profiles, websites, and content.
