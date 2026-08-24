@@ -1,72 +1,61 @@
 const colors = {
+  brand: {
+    green: "#28E063",
+    black: "#000000",
+    white: "#FFFFFF",
+    gray: "#F3F4F6",
+    darkGray: "#6B7280",
+    lightGray: "#E5E7EB",
+    purple: "#7C3AED",
+  },
   light: {
-    text: "#0a0a0a",
-    tint: "#7C3AED",
-
-    background: "#F3F2EE",
-    foreground: "#0E0E0E",
-
+    text: "#000000",
+    tint: "#28E063",
+    background: "#FFFFFF",
+    foreground: "#000000",
     card: "#FFFFFF",
-    cardForeground: "#0E0E0E",
-
-    primary: "#7C3AED",
-    primaryForeground: "#FFFFFF",
-
-    secondary: "#EFEDE7",
-    secondaryForeground: "#0E0E0E",
-
-    muted: "#F3F2EE",
-    mutedForeground: "#6B6B6B",
-
-    accent: "#EDE9FE",
-    accentForeground: "#5B21B6",
-
+    cardForeground: "#000000",
+    primary: "#28E063",
+    primaryForeground: "#000000",
+    secondary: "#F3F4F6",
+    secondaryForeground: "#000000",
+    muted: "#F3F4F6",
+    mutedForeground: "#6B7280",
+    accent: "#E7F9ED",
+    accentForeground: "#28E063",
     destructive: "#DC2626",
     destructiveForeground: "#FFFFFF",
-
-    border: "#E7E5DF",
-    input: "#E7E5DF",
-
-    success: "#10B981",
-    warning: "#F4D58D",
+    border: "#E5E7EB",
+    input: "#E5E7EB",
+    success: "#28E063",
+    warning: "#FBBF24",
     pending: "#FFF3C7",
     pendingText: "#7A5A00",
   },
-
   dark: {
-    text: "#FAFAFA",
-    tint: "#A78BFA",
-
-    background: "#0B0B0F",
-    foreground: "#FAFAFA",
-
-    card: "#16161D",
-    cardForeground: "#FAFAFA",
-
-    primary: "#A78BFA",
-    primaryForeground: "#0B0B0F",
-
-    secondary: "#1F1F27",
-    secondaryForeground: "#FAFAFA",
-
-    muted: "#16161D",
+    text: "#FFFFFF",
+    tint: "#28E063",
+    background: "#000000",
+    foreground: "#FFFFFF",
+    card: "#111827",
+    cardForeground: "#FFFFFF",
+    primary: "#28E063",
+    primaryForeground: "#000000",
+    secondary: "#1F2937",
+    secondaryForeground: "#FFFFFF",
+    muted: "#111827",
     mutedForeground: "#9CA3AF",
-
-    accent: "#2A1F3D",
-    accentForeground: "#C4B5FD",
-
+    accent: "#064E3B",
+    accentForeground: "#28E063",
     destructive: "#F87171",
-    destructiveForeground: "#0B0B0F",
-
-    border: "#262630",
-    input: "#262630",
-
-    success: "#34D399",
+    destructiveForeground: "#000000",
+    border: "#374151",
+    input: "#374151",
+    success: "#28E063",
     warning: "#FBBF24",
     pending: "#3B2F0A",
     pendingText: "#FCD34D",
   },
-
   radius: 16,
 };
 

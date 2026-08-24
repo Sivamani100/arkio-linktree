@@ -43,18 +43,23 @@ function AuthGate() {
 
     if (inSplash) return;
 
-    if (!hasOnboarded && !inOnboarding) {
+    const inAuthFlow = top === "sign-up" || top === "sign-in" || top === "username";
+
+    if (!isAuthenticated && !inAuthFlow) {
+      router.replace("/sign-up");
+      return;
+    }
+
+    if (isAuthenticated && !hasOnboarded && !inOnboarding) {
       router.replace("/onboarding");
-    } else if (hasOnboarded && inOnboarding) {
-      if (!isAuthenticated) {
-        router.replace("/sign-in");
-      } else {
-        router.replace("/(tabs)");
-      }
-    } else if (hasOnboarded && !isAuthenticated && !inAuth && !inSplash) {
-      router.replace("/sign-in");
+      return;
+    }
+
+    if (isAuthenticated && hasOnboarded && (inAuthFlow || inOnboarding)) {
+      router.replace("/(tabs)");
     }
   }, [ready, isAuthenticated, hasOnboarded, segments, router]);
+
 
   return null;
 }
@@ -73,8 +78,11 @@ function RootLayoutNav() {
       >
         <Stack.Screen name="splash" options={{ animation: "fade" }} />
         <Stack.Screen name="sign-in" options={{ animation: "fade" }} />
+        <Stack.Screen name="sign-up" options={{ animation: "fade" }} />
+        <Stack.Screen name="username" options={{ animation: "fade" }} />
         <Stack.Screen name="onboarding" options={{ animation: "fade" }} />
         <Stack.Screen name="(tabs)" options={{ animation: "fade" }} />
+
         <Stack.Screen name="my-info" />
         <Stack.Screen name="billing" />
         <Stack.Screen name="edit-plan" />

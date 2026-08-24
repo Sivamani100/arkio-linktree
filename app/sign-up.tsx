@@ -1,46 +1,48 @@
 import { useRouter } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View, TextInput, Pressable, Image } from "react-native";
+import { StyleSheet, Text, View, TextInput, Pressable, Image, ScrollView } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinktreeLogo } from "@/components/LinktreeLogo";
 import { Button } from "@/components/Button";
-import { useApp } from "@/context/AppContext";
 
-export default function LoginScreen() {
+export default function SignUpScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const { signIn } = useApp();
-
-  const handleLogin = () => {
-    signIn();
-    router.replace("/(tabs)");
-  };
 
   return (
-
-    <View style={[styles.container, { paddingTop: insets.top + 20 }]}>
+    <ScrollView 
+      style={styles.container} 
+      contentContainerStyle={{ paddingTop: insets.top + 20, paddingBottom: insets.bottom + 40 }}
+    >
       <View style={styles.header}>
         <LinktreeLogo size={24} />
       </View>
 
       <View style={styles.content}>
-        <Text style={styles.title}>Welcome back</Text>
-        <Text style={styles.subtitle}>Log in to your Linktree</Text>
+        <Text style={styles.title}>Join Linktree</Text>
+        <Text style={styles.subtitle}>Sign up for free!</Text>
 
         <View style={styles.form}>
           <TextInput
-            placeholder="Email or username"
+            placeholder="Email"
             placeholderTextColor="#9CA3AF"
             style={styles.input}
+            keyboardType="email-address"
+            autoCapitalize="none"
           />
           <Button
             title="Continue"
             variant="dark"
             style={styles.continueBtn}
-            onPress={handleLogin}
+            onPress={() => router.push("/username")}
           />
-
         </View>
+
+        <Text style={styles.disclaimer}>
+          By clicking <Text style={{ fontFamily: "Inter_700Bold" }}>Create account</Text>, you agree to Linktree's{" "}
+          <Text style={styles.disclaimerLink}>privacy notice</Text>,{" "}
+          <Text style={styles.disclaimerLink}>T&Cs</Text> and to receive offers, news and updates.
+        </Text>
 
         <View style={styles.divider}>
           <View style={styles.line} />
@@ -66,17 +68,14 @@ export default function LoginScreen() {
         </View>
 
         <View style={styles.footer}>
-          <Text style={styles.forgotText}>
-            Forgot password? • Forgot username?
-          </Text>
-          <Pressable onPress={() => router.push("/sign-up")}>
+          <Pressable onPress={() => router.push("/sign-in")}>
             <Text style={styles.footerLink}>
-              Don't have an account? <Text style={styles.linkText}>Sign up</Text>
+              Already have an account? <Text style={styles.linkText}>Log in</Text>
             </Text>
           </Pressable>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -118,8 +117,20 @@ const styles = StyleSheet.create({
     fontFamily: "Inter_400Regular",
   },
   continueBtn: {
-    borderRadius: 30, // Pill shaped as per screenshot
+    borderRadius: 30,
     marginTop: 8,
+    backgroundColor: "#E5E7EB", // Light gray when inactive, but let's stick to dark for now as per theme
+  },
+  disclaimer: {
+    fontSize: 12,
+    fontFamily: "Inter_400Regular",
+    color: "#6B7280",
+    textAlign: "center",
+    marginTop: 24,
+    lineHeight: 18,
+  },
+  disclaimerLink: {
+    textDecorationLine: "underline",
   },
   divider: {
     flexDirection: "row",
@@ -164,12 +175,6 @@ const styles = StyleSheet.create({
   footer: {
     marginTop: 40,
     alignItems: "center",
-    gap: 16,
-  },
-  forgotText: {
-    color: "#6B7280",
-    fontSize: 13,
-    fontFamily: "Inter_400Regular",
   },
   footerLink: {
     color: "#6B7280",
@@ -177,7 +182,7 @@ const styles = StyleSheet.create({
     fontFamily: "Inter_400Regular",
   },
   linkText: {
-    color: "#7C3AED", // Purple color for link
+    color: "#7C3AED",
     fontFamily: "Inter_600SemiBold",
   },
 });
